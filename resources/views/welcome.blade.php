@@ -1,10 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="center jumbotron">
-        <div class="text-center">
-            <h1>machi-post</h1>
-            {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-lg btn-primary']) !!}
+            <section class="bgTop mb-4">
+                <div class="topMain">
+                    <div class="topMainBody">
+                        <h1 class="site-title">MACHI-POST</h1>
+                        <p>ああああああの共有サイト</p>
+                        <a href="/login" class="btn my-1">ログインはこちら</a>
+                    </div>
+                </div>
+            </section>
+        
+        <div class="container">
+            <div class="row">
+                @if (count($posts) > 0)
+                    @include('posts.posts', ['posts' => $posts])
+                @endif
+            </div>
         </div>
-    </div>
+ 
 @endsection
