@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+html {
+    min-height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
 body {
     font-size: 16px;
 }
@@ -27,7 +32,7 @@ h1.standard {
 }
 /*768px under*/
 @media screen and (max-width:768px) {
-h1.standard .standard {
+h1.standard {
     width: 50%;
     font-size: 26px;
     line-height: 1.15;
@@ -62,24 +67,17 @@ h3 {
     color: #71af6c;
     border-bottom: 5px solid #ccc;
 }
-button.type01 {
-    margin-top: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
 .row {
     margin: 0 auto;
 }
-.col-sm-4, .col-lg-3 {
-    padding: 1%;
+.container {
+    padding-bottom: 15%;
+    overflow: hidden;
 }
-.card-body {
-    padding: 4%;
-}
-.postinfo {
-    font-size: 14px;
-}
-/*TOP MAIN*/
+
+/*--------------------------------
+	Top Main
+--------------------------------*/
 .bgTop {
     position: relative;
     width: 100%;
@@ -123,7 +121,7 @@ button.type01 {
 .topMain a.btn:hover {
     background: #93c483;
 }
-/* 980px under */
+/*980px under*/
 @media screen and (max-width: 980px) {
 .topMain {
     font-size: 12px;
@@ -135,7 +133,7 @@ button.type01 {
     padding: 1.5%;
 }
 }
-/* 768px under */
+/*768px under*/
 @media screen and (max-width: 768px) {
 .topMain {
     width: 25vw;
@@ -151,7 +149,7 @@ button.type01 {
     margin: 1% auto;
 }
 }
-/* 480px under */
+/*480px under*/
 @media screen and (max-width: 480px) {
 .topMainBody .site-title {
     padding: 0 10px 0;
@@ -162,7 +160,10 @@ button.type01 {
     padding: 0.75;
 }
 }
-/*button*/
+
+/*--------------------------------
+	Button
+--------------------------------*/
 input.registration, input.login {
     background: #71af6c;
     font-size: 100%;
@@ -172,10 +173,15 @@ input.registration:hover, input.login:hover {
     background: #93c483;
     color: #fff;
 }
+button.type01 {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 .attention {
     text-align:center;
 }
-/* 768px under */
+/*768px under*/
 @media screen and (max-width: 768px) {
 lavel {
     font-size: 13px;
@@ -183,4 +189,77 @@ lavel {
 .attention {
     font-size: 13px;
 }
+}
+
+/*--------------------------------
+	Card
+--------------------------------*/
+.card-columns {
+    columns: 4;
+}
+.card-columns .card-body {
+    padding: 2%;
+}
+/*980px under*/
+@media screen and (max-width:980px) {
+.card-columns {
+    columns: 3;
+}
+}
+/*768px under*/
+@media screen and (max-width:768px) {
+.card-columns {
+    columns: 2;
+}
+}
+.card-body {
+    padding: 4%;
+}
+.card {
+    border: 1px solid #eee;
+}
+.postTitle, .postInfo {
+    font-size: 14px;
+}
+/*768px under*/
+@media screen and (max-width:768px) {
+.postTitle {
+    font-size: 14px;
+}
+.postInfo {
+    font-size: 12px;
+}
+}
+
+/*--------------------------------
+	Footer
+--------------------------------*/
+.footer {
+    width: 100%;
+    position: absolute;
+    background-color: #71af6c;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+    overflow: hidden;
+}
+.footer > .footernav {
+    background-color: #f6f6f6;
+    padding: 20px 0;
+    color: #aaa;
+    border-top: 1px solid #f0f0f0;
+}
+.footer > .footernav a {
+    margin: auto 2%;
+    color: #71af6c;
+    text-decoration: none;
+}
+.footer > .footernav a:hover {
+    color: #93c483;
+}
+.footer > .container {
+    width: auto;
+}
+.footer > .coryright {
+    line-height: 4.0;
 }
