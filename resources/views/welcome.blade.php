@@ -6,7 +6,11 @@
                     <div class="topMainBody">
                         <h1 class="site-title">MACHI-POST</h1>
                         <p>ああああああの共有サイト</p>
-                        <a href="/login" class="btn my-1">ログインはこちら</a>
+                        @if (Auth::check())
+	                        <a href="/users/{{$user->id}}" class="btn my-1">投稿はこちらから</a>
+                        @else
+	                        <a href="/login" class="btn my-1">投稿はこちらから</a>
+                        @endif
                     </div>
                 </div>
             </section>

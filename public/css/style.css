@@ -3,6 +3,7 @@
 html {
     min-height: 100vh;
     position: relative;
+    padding-bottom: 150px;
     box-sizing: border-box;
 }
 body {
@@ -13,6 +14,42 @@ header {
     z-index:100;
     box-shadow:0 2px 2px 0 rgba(0,0,0,0.2);
 }
+
+/*--------------------------------
+	Footer
+--------------------------------*/
+.footer {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+}
+.footer > .footernav {
+    background-color: #f6f6f6;
+    padding: 20px 0;
+    color: #aaa;
+    border-top: 1px solid #f0f0f0;
+}
+.footer > .footernav a {
+    margin: auto 2%;
+    color: #5aac94;
+    text-decoration: none;
+}
+.footer > .footernav a:hover {
+    color: #77bba7;
+}
+.footer > .container {
+    width: auto;
+}
+.footer > .coryright {
+    background-color: #5aac94;
+    line-height: 4.0;
+}
+
+/*--------------------------------
+	Contents
+--------------------------------*/
 h1.standard {
     margin: 0 auto 30px;
     text-align: center;
@@ -23,7 +60,7 @@ h1.standard {
 h1.standard {
     width: 30%;
     display: block;
-    color: #71af6c;
+    color: #5aac94;
     font-size: 32px;
     line-height: 2.0;
     letter-spacing: 0.1rem;
@@ -52,7 +89,7 @@ h1.standard {
 }
 h2 {
     display: block;
-    background: #71af6c;
+    background: #5aac94;
     margin: 0 auto 20px;
     padding: 10px 0 10px 10px;
     font-size: 28px;
@@ -64,14 +101,13 @@ h3 {
     margin: 40px auto 20px;
     padding-bottom: 5px;
     font-size: 24px;
-    color: #71af6c;
+    color: #5aac94;
     border-bottom: 5px solid #ccc;
 }
 .row {
-    margin: 0 auto;
+    margin: 0;
 }
 .container {
-    padding-bottom: 15%;
     overflow: hidden;
 }
 
@@ -102,24 +138,24 @@ h3 {
     margin-top: 30%;
     font-size: 14px;
     border-radius: 50%;
-    border: double 4px #d0e6c8;
+    border: double 4px #c8e6d5;
 }
 .topMainBody .site-title {
     display: inline-block;
     margin-bottom: 10px;
     padding: 0 5px 10px;
     font-size: 26px;
-    color: #80bc77;
+    color: #5aac94;
     line-height: 1.0;
-    border-bottom: solid 4px #d0e6c8;
+    border-bottom: solid 4px #c8e6d5;
 }
 .topMain a.btn {
-    background: #71af6c;
+    background: #5aac94;
     font-size: 100%;
     color: #fff;
 }
 .topMain a.btn:hover {
-    background: #93c483;
+    background: #77bba7;
 }
 /*980px under*/
 @media screen and (max-width: 980px) {
@@ -151,6 +187,16 @@ h3 {
 }
 /*480px under*/
 @media screen and (max-width: 480px) {
+.bgTop {
+    padding-bottom: calc(500 / 1000 * 100%);
+}
+.topMain {
+    width: 30vw;
+    height: 30vw;
+    width: 60%;
+    max-height: 400px;
+    margin-top: 50%;
+}
 .topMainBody .site-title {
     padding: 0 10px 0;
     margin-bottom: 0;
@@ -165,12 +211,12 @@ h3 {
 	Button
 --------------------------------*/
 input.registration, input.login {
-    background: #71af6c;
+    background: #5aac94;
     font-size: 100%;
     color: #fff;
 }
 input.registration:hover, input.login:hover {
-    background: #93c483;
+    background: #77bba7;
     color: #fff;
 }
 button.type01 {
@@ -195,71 +241,45 @@ lavel {
 	Card
 --------------------------------*/
 .card-columns {
-    columns: 4;
-}
-.card-columns .card-body {
-    padding: 2%;
-}
-/*980px under*/
-@media screen and (max-width:980px) {
-.card-columns {
-    columns: 3;
-}
-}
-/*768px under*/
-@media screen and (max-width:768px) {
-.card-columns {
-    columns: 2;
-}
+    column-count: 4;
 }
 .card-body {
-    padding: 4%;
+    padding: 2%;
 }
-.card {
-    border: 1px solid #eee;
+.postTitle {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
-.postTitle, .postInfo {
-    font-size: 14px;
-}
-/*768px under*/
-@media screen and (max-width:768px) {
 .postTitle {
     font-size: 14px;
 }
 .postInfo {
     font-size: 12px;
+    color: #999;
 }
+.card {
+    border: 1px solid #eee;
+    display：inline-block;
 }
-
-/*--------------------------------
-	Footer
---------------------------------*/
-.footer {
-    width: 100%;
-    position: absolute;
-    background-color: #71af6c;
-    text-align: center;
-    color: #fff;
-    bottom: 0;
-    overflow: hidden;
-}
-.footer > .footernav {
-    background-color: #f6f6f6;
-    padding: 20px 0;
-    color: #aaa;
-    border-top: 1px solid #f0f0f0;
-}
-.footer > .footernav a {
-    margin: auto 2%;
-    color: #71af6c;
+.card a {
+    color: #5aac94;
     text-decoration: none;
 }
-.footer > .footernav a:hover {
-    color: #93c483;
+.card a:hover {
+    color: #77bba7;
 }
-.footer > .container {
-    width: auto;
+/*980px under*/
+@media screen and (max-width:980px) {
+.card-columns {
+    column-count: 3;
 }
-.footer > .coryright {
-    line-height: 4.0;
+}
+/*480px under*/
+@media screen and (max-width:480px) {
+.card-columns {
+    column-count: 1;
+}
 }

@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::get('/', 'PostsController@index');
 
+// 投稿詳細追加
+Route::resource('posts', 'PostsController', ['only' => ['show']]);
 
 // ユーザ登録
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');

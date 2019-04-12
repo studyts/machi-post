@@ -54,6 +54,15 @@ class PostsController extends Controller
         return back();
     }
     
+    public function show($id)
+    {
+        $post = \App\Post::find($id);
+        
+        return view('posts.show', [
+            'post' => $post,
+        ]);
+    }
+    
     public function destroy($id)
     {
         $post = \App\Post::find($id);
